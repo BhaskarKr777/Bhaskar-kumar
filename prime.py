@@ -13,7 +13,7 @@ def is_prime(n):
         i += 6
     return True
 
-print("Prime numbers from 1 to 100:")
+print("Prime number 1 to 100 :")
 for num in range(1, 101):
     if is_prime(num):
         print(num)
