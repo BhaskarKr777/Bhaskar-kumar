@@ -1,19 +1,21 @@
-#for fibonacci series
 def fibonacci(n):
-    fib_series = [0, 1] 
-    
-    while len(fib_series) < n:
-        next_term = fib_series[-1] + fib_series[-2] 
-        fib_series.append(next_term) 
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    else:
+        fib = fibonacci(n - 1)
+        fib.append(fib[-1] + fib[-2])
+        return fib
 
-    return fib_series
-
-n = int(input("Enter the number of terms in the Fibonacci series: "))
+# Input the number of terms you want in the Fibonacci sequence
+n = int(input("Enter the number of Fibonacci terms: "))
 
 if n <= 0:
     print("Please enter a positive integer.")
 else:
     result = fibonacci(n)
-    print("Fibonacci series with", n, "terms:")
-    for number in result:
-        print(number)
+    print("Fibonacci sequence up to", n, "terms:")
+    print(result)
