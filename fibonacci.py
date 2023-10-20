@@ -10,11 +10,11 @@ def fibonacci(n):
         fib.append(fib[-1] + fib[-2])
         return fib
 
-n = int(input("Enter the number of Fibonacci terms: "))
+n = int(input("Enter number:- "))
 
 if n <= 0:
-    print("Please enter a positive integer.")
+    print("Enter positive number.")
 else:
     result = fibonacci(n)
-    print("Fibonacci sequence up to", n, "terms:")
+    print("Fibonacci number of ", n, "terms:")
     print(result)
