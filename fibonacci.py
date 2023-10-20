@@ -10,7 +10,6 @@ def fibonacci(n):
         fib.append(fib[-1] + fib[-2])
         return fib
 
-# Input the number of terms you want in the Fibonacci sequence
 n = int(input("Enter the number of Fibonacci terms: "))
 
 if n <= 0:
